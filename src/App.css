@@ -60,14 +60,45 @@ nav li:hover {
 }
 
 nav ul {
+  margin-top: 1rem;
   list-style: none;
   display: flex;
+  align-items: center;
 }
 
-nav ul li {
+.btn-navBar {
   padding: 1rem 1.5rem;
+}
+
+.btn.btn-primary:active:hover,
+.btn.btn-primary:hover {
+  background: none;
+}
+
+li>div {
+  padding: 0.7rem 1rem;
+}
+
+li>div .dropdown-NavBar,
+li>div .dropdown-NavBar:active,
+li>div .dropdown-NavBar:hover {
+  background: none;
+  color: black;
+  border: none;
 }
 
 .registro {
   margin-left: auto;
+}
+
+nav label {
+  background-color: red;
+  clip-path: circle();
+  width: 2rem;
+  text-align: center;
+
+}
+
+h1 {
+  text-align: center;
 }
