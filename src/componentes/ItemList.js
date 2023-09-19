@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import CardProduct from './CardProduct';
+import '../styles/Card-Product.css'
 
 export default function ItemListContent({ greetings }) {
     const [productos, setProductos] = useState([]);
-    const [marca, setMarca] = useState([]);
-    const [modelo, setModelo] = useState([]);
-    const [imagenes, setImagenes] = useState([]);
-    const [imagen, setImagen] = useState([]);
 
     useEffect(() => {
         const peticion = async () => {
@@ -15,19 +12,9 @@ export default function ItemListContent({ greetings }) {
                 const datos = await respuesta.json();
                 console.log(datos.results);
 
-                const newProductos = datos.results.map(element => element.attributes);
+                const newProductos = datos.results.map(element => element);
                 setProductos(newProductos);
-                const newMarca = newProductos.map(e => e[0].value_name);
-                const newModelo = newProductos.map(e => e[1].value_name);
-                setMarca(newMarca);
-                setModelo(newModelo);
-
-                const newImagenes = datos.results.map(e => e.pictures);
-                setImagenes(newImagenes)
-                const newImagen = newImagenes.map(e => e[0].url)
-                setImagen(newImagen)
-
-
+                console.log(productos)
             } catch (error) {
                 console.error('Error al cargar los productos:', error);
             }
@@ -35,7 +22,6 @@ export default function ItemListContent({ greetings }) {
 
         peticion();
     }, []);
-
     return (
         <>
             <h1>{greetings}</h1>
@@ -45,10 +31,10 @@ export default function ItemListContent({ greetings }) {
                     <CardProduct
                         key={index}
                         producto={{
-                            marca: producto[0].value_name,
-                            modelo: producto[1].value_name,
+                            marca: producto.attributes[0].value_name.max,
+                            modelo: producto.attributes[1].value_name
                         }}
-                        url={imagen[index]}
+                        url={producto.pictures[0].url}
                     />
                 ))}
             </div>

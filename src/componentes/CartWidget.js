@@ -3,9 +3,9 @@ import { faB, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 export default function CartWidget() {
     return (
-        <li className='btn-navBar'>
+        <li className='btn-navBar' id='carrito'>
             <FontAwesomeIcon icon={faCartShopping} />
-            <label>1</label>
+            <p>1</p>
         </li>
     )
 

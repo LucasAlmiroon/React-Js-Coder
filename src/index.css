@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+    font: italic normal 400 16px Arial, Verdana, sans-serif;
+  }
+  
+  .centrado {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+  }
+  
+  h1,
+  h2 {
+    text-align: center;
+  }

@@ -8,7 +8,7 @@ export default function CardProduct({ producto, url }) {
                 Marca: {producto.marca} </p>
             <p className="descripcion">
                 Modelo: {producto.modelo}</p>
-            <button type="button" class="btn btn-primary btn-sm" id="addCart">Añadir al carrito</button>
+            <button type="button" className="btn btn-primary btn-sm" id="addCart">Añadir al carrito</button>
 
         </div>
     )
