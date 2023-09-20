@@ -1,7 +1,9 @@
+import Carousel from "./Carousel"
+
 export default function CardProduct({ producto, url }) {
     return (
         <div>
-            <img src={url}></img>
+            <Carousel images={url} />
             <p>Mochila {producto.marca} {producto.modelo}</p>
             <p>$50.000</p>
             <p className="descripcion">

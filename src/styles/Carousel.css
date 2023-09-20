@@ -1,0 +1,33 @@
+.carousel {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+    border: 1px black solid;
+}
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    color: rgb(235 170 170);
+    outline: none;
+}
+
+.prev-button :hover,
+.next-button :hover {
+    font-size: 50px;
+}
+
+.prev-button {
+    left: 0;
+}
+
+.next-button {
+    right: 0;
+}
