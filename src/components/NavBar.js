@@ -1,5 +1,6 @@
 import Dropdown from 'react-bootstrap/Dropdown';
 import CartWidget from './CartWidget';
+import { Link } from 'react-router-dom';
 
 export default function NavBar() {
     return (
@@ -16,10 +17,15 @@ export default function NavBar() {
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
-                            <Dropdown.Item href="#/action-1">Mochilas</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">Valijas</Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">Accesorios</Dropdown.Item>
-                        </Dropdown.Menu>
+                            <Link to="/mochilas">
+                                Mochilas
+                            </Link>
+                            <Link to="/valijas">
+                                Valija
+                            </Link>
+                            <Link to="/accesorios">
+                                Accesorios
+                            </Link></Dropdown.Menu>
                     </Dropdown>
                 </li>
                 <li className='btn-navBar'>
