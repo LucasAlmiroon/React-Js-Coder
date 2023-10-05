@@ -11,8 +11,7 @@ export default function App() {
     <Header>
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/productos" element={<Products />} />
-        <Route exact path="/productos/:marca/:tipo" element={<Products />} />
+        <Route exact path="/:marca/:tipo" element={<Products />} />
       </Routes>
     </Header>
   );

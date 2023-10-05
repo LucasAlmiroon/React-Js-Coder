@@ -1,41 +1,96 @@
 import Dropdown from 'react-bootstrap/Dropdown';
 import CartWidget from './CartWidget';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function NavBar() {
     return (
         <nav>
             <ul>
                 <li className='btn-navBar'>
-                    <Link to="/">
-                                Home
-                            </Link>
+                    <NavLink to="/"> Home </NavLink>
                 </li>
                 <li>
                     <Dropdown>
                         <Dropdown.Toggle variant="success" id="dropdown-basic" className='dropdown-NavBar'>
                             Productos
                         </Dropdown.Toggle>
-
                         <Dropdown.Menu>
-                            <Link to="/mochilas">
-                                Mochilas
-                            </Link>
-                            <Link to="/valijas">
-                                Valija
-                            </Link>
-                            <Link to="/accesorios">
-                                Accesorios
-                            </Link></Dropdown.Menu>
+                            <Dropdown>
+                                <Dropdown.Toggle variant="success" id="dropdown-basic" className='dropdown-NavBar'>
+                                    Mochila
+                                </Dropdown.Toggle>
+                                <Dropdown.Menu>
+                                    <Dropdown.Item>
+                                        <NavLink to="mochila/primicia">
+                                            Primicia
+                                        </NavLink>
+                                    </Dropdown.Item>
+
+                                    <Dropdown.Item>
+                                        <NavLink to="mochila/samsonite">
+                                            Samsonite
+                                        </NavLink>
+                                    </Dropdown.Item>
+
+                                    <Dropdown.Item>
+                                        <NavLink to="mochila/gremond">
+                                            Gremond
+                                        </NavLink>
+                                    </Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
+                            <Dropdown>
+                                <Dropdown.Toggle variant="success" id="dropdown-basic" className='dropdown-NavBar'>
+                                    Valijas
+                                </Dropdown.Toggle>
+                                <Dropdown.Menu>
+                                    <Dropdown.Item>
+                                        <NavLink to="valija/primicia">
+                                            Primicia
+                                        </NavLink>
+                                    </Dropdown.Item>
+                                    <Dropdown.Item>
+                                        <NavLink to="valija/samsonite">
+                                            Samsonite
+                                        </NavLink>
+                                    </Dropdown.Item>
+                                    <Dropdown.Item>
+                                        <NavLink to="valija/delsey">
+                                            Delsey
+                                        </NavLink>
+                                    </Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
+                            <Dropdown>
+                                <Dropdown.Toggle variant="success" id="dropdown-basic" className='dropdown-NavBar'>
+                                    Bolsos de viaje
+                                </Dropdown.Toggle>
+                                <Dropdown.Menu>
+                                    <Dropdown.Item>
+                                        <NavLink to="bolso-de-viaje/primicia">
+                                            Primicia
+                                        </NavLink>
+                                    </Dropdown.Item>
+                                    <Dropdown.Item>
+                                        <NavLink to="bolso-de-viaje/everlast">
+                                            Everlast
+                                        </NavLink>
+                                    </Dropdown.Item>
+                                    <Dropdown.Item>
+                                        <NavLink to="bolso-de-viaje/gremond">
+                                            Gremond
+                                        </NavLink>
+                                    </Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
+                        </Dropdown.Menu>
                     </Dropdown>
                 </li>
                 <li className='btn-navBar'>
-                    <a href="index.html">About
-                    </a>
+                    <NavLink to="/"> About </NavLink>
                 </li>
                 <li className="registro">
-                    <a href="index.html">Registrarse
-                    </a>
+                    <NavLink to="/"> Home </NavLink>
                 </li>
                 <CartWidget />
             </ul>
