@@ -7,8 +7,9 @@ export default function NavBar() {
         <nav>
             <ul>
                 <li className='btn-navBar'>
-                    <a href="index.html">Home
-                    </a>
+                    <Link to="/">
+                                Home
+                            </Link>
                 </li>
                 <li>
                     <Dropdown>

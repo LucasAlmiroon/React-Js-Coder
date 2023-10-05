@@ -5,25 +5,25 @@ import { useParams } from 'react-router-dom';
 
 export default function ItemListContent({ greetings }) {
     const [productos, setProductos] = useState([]);
-    const busqueda = useParams()
+    const {marca, tipo} = useParams()
 
     useEffect(() => {
         const peticion = async () => {
             try {
-                const respuesta = await fetch("https://api.mercadolibre.com/products/search?status=active&site_id=MLA&q=" + { busqueda });
+                const respuesta = await fetch("https://api.mercadolibre.com/products/search?status=active&site_id=MLA&q=" + marca + ' ' + tipo);
                 const datos = await respuesta.json();
                 console.log(datos.results);
 
                 const newProductos = datos.results.map(element => element);
                 setProductos(newProductos);
-                console.log(busqueda)
+                console.log(marca)
             } catch (error) {
                 console.error('Error al cargar los productos:', error);
             }
         };
 
         peticion();
-    }, []);
+    }, [marca, tipo]);
     return (
         <>
             <h1>{greetings}</h1>
