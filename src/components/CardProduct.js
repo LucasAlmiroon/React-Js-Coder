@@ -11,7 +11,6 @@ export default function CardProduct({ producto, url }) {
             <p className="descripcion">
                 Modelo: {producto.modelo}</p>
             <button type="button" className="btn btn-primary btn-sm" id="addCart">Añadir al carrito</button>
-
         </div>
     )
 }

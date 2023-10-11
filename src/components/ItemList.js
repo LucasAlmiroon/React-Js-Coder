@@ -34,7 +34,8 @@ export default function ItemListContent({ greetings }) {
                         key={index}
                         producto={{
                             marca: producto.attributes[0].value_name,
-                            modelo: producto.attributes[1].value_name
+                            modelo: producto.attributes[1].value_name,
+                            id: producto.id
                         }}
                         url={producto.pictures}
                     />
