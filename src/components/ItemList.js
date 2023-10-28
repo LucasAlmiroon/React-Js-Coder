@@ -12,11 +12,10 @@ export default function ItemListContent({ greetings }) {
             try {
                 const respuesta = await fetch("https://api.mercadolibre.com/products/search?status=active&site_id=MLA&q=" + tipo + ' ' + marca);
                 const datos = await respuesta.json();
-                console.log(datos.results);
 
                 const newProductos = datos.results.map(element => element);
                 setProductos(newProductos);
-                console.log(marca)
+
             } catch (error) {
                 console.error('Error al cargar los productos:', error);
             }
@@ -35,9 +34,10 @@ export default function ItemListContent({ greetings }) {
                         producto={{
                             marca: producto.attributes[0].value_name,
                             modelo: producto.attributes[1].value_name,
-                            id: producto.id
+                            id: producto.id,
+                            url: producto.pictures,
+                            precio: 50000
                         }}
-                        url={producto.pictures}
                     />
                 ))}
             </div>

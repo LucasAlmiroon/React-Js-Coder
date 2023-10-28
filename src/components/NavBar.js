@@ -7,7 +7,7 @@ export default function NavBar() {
         <nav>
             <ul>
                 <li className='btn-navBar'>
-                    <NavLink to="/"> Home </NavLink>
+                    <NavLink to="/valijas"> Home </NavLink>
                 </li>
                 <li>
                     <Dropdown>
@@ -87,10 +87,10 @@ export default function NavBar() {
                     </Dropdown>
                 </li>
                 <li className='btn-navBar'>
-                    <NavLink to="/"> About </NavLink>
+                    <NavLink to="/about"> About </NavLink>
                 </li>
                 <li className="registro">
-                    <NavLink to="/"> Home </NavLink>
+                    <NavLink to="/registro"> Registrarse </NavLink>
                 </li>
                 <CartWidget />
             </ul>

@@ -1,0 +1,28 @@
+.checkoutForm {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.chekout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around
+}
+
+.chekout ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    list-style: none;
+}
+
+
+.chekout ul li p {
+    padding: 0 0.5rem
+}
+
+.chekout ul li img {
+    width: 50px;
+}
