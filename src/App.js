@@ -15,6 +15,7 @@ export default function App() {
     <ContextProvider>
       <Header>
         <Routes>
+          <Route exact path="/" element={<Home />} />
           <Route exact path="/:marca/:tipo" element={<Products />} />
           <Route exact path="/checkout" element={<Checkout />} />
           <Route exact path="/registro" element={<Registrarse />} />
